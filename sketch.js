@@ -26,7 +26,8 @@ function draw() {
   noFill();
   strokeWeight(4);
   stroke("black");
-  translate(x, frameCount);
+  translate(x, frameCount/2);
+
   for(var x = 0; x < windowWidth; x += 300) {
   for(var y = -100; y < windowHeight + 100; y += 10) {
     bezier(x, y+50, x+50, y+50, x+100, y-50, x+150, y+50);
