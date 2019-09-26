@@ -10,12 +10,36 @@ function setup() {
 }
 
 
-function draw() {
-  var colorList = ["#d8a47f", "#EF8354", "#EE4B6A", "#DF3B57"];
 
-  var index = floor(random() * colorList.length);
-  var colorHex = colorList[index];
-  stroke(color(colorHex));
+function draw() {
+  var colorList = ["#41337A", "#EF8354"];
+  var colorList2 = ["#84732B", "#DF3B57"];
+  var colorList3 = ["#F0C987", "#89BD9E"];
+  var colorList4 = ["#6EA4BF", "#1C3A13"];
+
+
+  if(mouseX < windowWidth/2 && mouseY < windowHeight/2) {
+    var index = floor(random() * colorList.length);
+    var colorHex = colorList[index];
+    stroke(color(colorHex));
+  }
+  else if(mouseX > windowWidth/2 && mouseY < windowHeight/2) {
+    var index2 = floor(random() * colorList2.length);
+    var colorHex2 = colorList2[index2];
+    stroke(color(colorHex2));
+  }
+  else if(mouseX > windowWidth/2 && mouseY > windowHeight/2) {
+    var index3 = floor(random() * colorList3.length);
+    var colorHex3 = colorList3[index3];
+    stroke(color(colorHex3));
+  }
+  else if(mouseX < windowWidth/2 && mouseY > windowHeight/2) {
+    var index4 = floor(random() * colorList4.length);
+    var colorHex4 = colorList4[index4];
+    stroke(color(colorHex4));
+  }
+
+
   line(mouseX, 0, mouseX, windowHeight);
 
   var x = 0;
