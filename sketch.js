@@ -1,5 +1,6 @@
 function preload() {
-  // put preload code here
+  font = loadFont('assets/gt-walsheim-bold.ttf');
+
 }
 
 function setup() {
@@ -9,6 +10,7 @@ function setup() {
 }
 
 function draw() {
+  push();
   var colorList = ["#41337A", "#EF8354"];
   var colorList2 = ["#84732B", "#DF3B57"];
   var colorList3 = ["#F0C987", "#89BD9E"];
@@ -32,6 +34,7 @@ function draw() {
     stroke(color(colorHex4));
   }
 
+  strokeWeight(4);
   line(mouseX, 0, mouseX, windowHeight);
 
   var x = 0;
@@ -40,7 +43,7 @@ function draw() {
   var s = 0;
 
   noFill();
-  strokeWeight(4);
+  strokeWeight(3);
   stroke("black");
   translate(x, frameCount / 2);
 
@@ -58,4 +61,15 @@ function draw() {
   if (mouseIsPressed) {
     document.location.reload();
   }
+  pop();
+
+  push();
+  textAlign(CENTER,CENTER);
+  textSize(20);
+  fill("white");
+  textFont(font);
+  text("move the mouse to change the colors", windowWidth/2, windowHeight/2);
+  text("Click to refresh", windowWidth/2, windowHeight - 50);
+  pop();
+
 }
