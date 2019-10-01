@@ -69,7 +69,7 @@ function draw() {
   fill("white");
   textFont(font);
   text("move the mouse to change the colors", windowWidth/2, windowHeight/2);
-  text("Click to refresh", windowWidth/2, windowHeight - 50);
+  text("click to refresh", windowWidth/2, windowHeight - 50);
   pop();
 
 }
